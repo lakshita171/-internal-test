@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Task Manager</h1>
+    <p class="subtitle">Stay organized and productive</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Active Tasks</h3>
+            <span id="active">2</span>
+        </div>
+
+        <div class="card">
+            <h3>Completed</h3>
+            <span id="completed">1</span>
+        </div>
+
+        <div class="card">
+            <h3>Total Tasks</h3>
+            <span id="total">3</span>
+        </div>
+
+    </div>
+
+    <div class="add-task-box">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button onclick="addTask()">+ Add New Task</button>
+    </div>
+
+    <div class="task-section">
+        <h2>Active Tasks</h2>
+
+        <ul id="taskList">
+
+            <li>
+                <input type="checkbox" onchange="completeTask(this)">
+                Design new landing page
+                <button class="delete" onclick="deleteTask(this)">🗑</button>
+            </li>
+
+            <li>
+                <input type="checkbox" onchange="completeTask(this)">
+                Create website layout
+                <button class="delete" onclick="deleteTask(this)">🗑</button>
+            </li>
+
+        </ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
